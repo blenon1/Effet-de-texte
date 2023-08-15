@@ -1,0 +1,143 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Caprasimo, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-toggler {
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f1f1f1;
+    transition: transform 0.3s ease-out;
+    opacity: 0.1s ease-out;
+}
+
+.l1 {
+    transform: translateY(-10px);
+}
+
+.l3 {
+    transform: translateY(10px);
+}
+
+.nav-toggler.active .l1{
+    transform: translateY(0px) rotate(135deg);
+}
+
+.nav-toggler.active .l2{
+    opacity: 0;
+}
+
+.nav-toggler.active .l3{
+    transform: translateY(0px) rotate(-135deg);
+}
+
+nav {
+    position: fixed;
+    width:100vw;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #9e9cb3;
+    border-bottom: 1px solid #cfcfcf;
+    transform: translateY(-100%);
+    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+}
+
+nav.active {
+    transform: translateY(0);
+}
+
+nav a {
+    font-family: Quicksand, sans-serif;
+    color: #f1f1f1;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+
+
+.accueil {
+    width: 100%;
+    height: 100%;
+    background: #333 url(./ressources/image3.jpg) center / cover no-repeat;
+}
+
+h1 {
+    font-size: 50px;
+    padding-top: 250px;
+    padding-left: 240px;
+    font-family: Roboto, sans-serif;
+}
+
+.media-container {
+    display: flex;
+    padding-left: 240px;
+    margin: 20px 0 40px 0;
+}
+
+.media-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #888282;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.icones {
+    width: 40px;
+    color: #f1f1f1;
+}
+
+.btn {
+    margin-left: 240px;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    border: 2px solid #333;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.btn:hover {
+    background: #333;
+    color: #f1f1f1;
+}
